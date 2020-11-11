@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import Backdrop from "../UIElements/Backdrop";
-import SideDrawer from "./SideDrawer";
-import NavLinks from "./NavLinks";
-import MainHeader from "./MainHeader";
-import "./MainNavigation.css";
+import MainHeader from './MainHeader';
+import NavLinks from './NavLinks';
+import SideDrawer from './SideDrawer';
+import Backdrop from '../UIElements/Backdrop';
+import './MainNavigation.css';
 
-const MainNavigation = (props) => {
+const MainNavigation = props => {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
   const openDrawerHandler = () => {
@@ -26,14 +26,17 @@ const MainNavigation = (props) => {
           <NavLinks />
         </nav>
       </SideDrawer>
+
       <MainHeader>
-        <button className="main-navigation__menu-btn" onClick={openDrawerHandler}>
+        <button
+          className="main-navigation__menu-btn"
+          onClick={openDrawerHandler}
+        >
           <span />
           <span />
           <span />
         </button>
         <h1 className="main-navigation__title">
-          <img className="logo" src="https://image.flaticon.com/icons/png/512/1458/1458541.png" alt="logo"/>
           <Link to="/">YourPlaces</Link>
         </h1>
         <nav className="main-navigation__header-nav">
